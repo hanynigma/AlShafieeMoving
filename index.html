@@ -74,9 +74,51 @@ function gtag_report_conversion(url) {
         .testimonial-card { border-right: 4px solid #0d6efd; }
         .area-section { padding: 40px; border-radius: 15px; background-color: #f8f9fa; margin-bottom: 30px; }
         #legal-content-container { display: none; }
+
+      /* =================== START: Floating Action Buttons CSS =================== */
+.floating-action-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none; /* Hidden by default on large screens */
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+}
+
+.floating-action-buttons .btn {
+    width: 50%;
+    border-radius: 0;
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Show buttons only on mobile screens */
+@media (max-width: 767.98px) {
+    .floating-action-buttons {
+        display: flex;
+    }
+    body {
+        padding-bottom: 65px; /* Add padding to prevent content from being hidden behind the buttons */
+    }
+}
+/* ===================  END: Floating Action Buttons CSS  =================== */
+      
     </style>
 </head>
 <body dir="rtl">
+
+  <!-- =================== START: Floating Action Buttons HTML ================== -->
+<div class="floating-action-buttons">
+    <a href="https://wa.me/201011294308" onclick="return gtag_report_conversion('AW-17595968789/OQppCJPzxqMbEJXatMZB', 'https://wa.me/201011294308');" target="_blank" class="btn btn-success">
+        <i class="fab fa-whatsapp me-2"></i>واتساب
+    </a>
+    <a href="tel:01068374011" onclick="return gtag_report_conversion('AW-17595968789/FJ0SCKVUz6MbEJXatMZB', 'tel:01068374011');" class="btn btn-primary">
+        <i class="fas fa-phone-volume me-2"></i>اتصال مباشر
+    </a>
+</div>
+<!-- ===================  END: Floating Action Buttons HTML  ================== -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
         <div class="container">
